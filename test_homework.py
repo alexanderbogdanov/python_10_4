@@ -1,4 +1,6 @@
+import random
 from math import pi
+from random import randint
 
 
 def test_greeting():
@@ -50,11 +52,11 @@ def test_random_list():
     """
     Создайте список из 10 случайных чисел от 1 до 100 (включая обе границы) и отсортируйте его по возрастанию.
     """
-    # TODO создайте список
-    l = []
 
-    assert len(l) == 10
-    assert all(l[i] <= l[i + 1] for i in range(len(l) - 1))
+    sorted_random_list = sorted(random.sample(range(1, 100), 10))
+    print(sorted_random_list)
+    assert len(sorted_random_list) == 10
+    assert all(sorted_random_list[i] <= sorted_random_list[i + 1] for i in range(len(sorted_random_list) - 1))
 
 
 def test_unique_elements():
