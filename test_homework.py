@@ -1,3 +1,4 @@
+from math import pi
 
 
 def test_greeting():
@@ -6,7 +7,6 @@ def test_greeting():
     """
     name = "Анна"
     age = 25
-    # TODO Сформируйте нужную строку
     output = f"Привет, {name}! Тебе {age} лет."
     print(output)
     # Проверяем результат
@@ -20,12 +20,10 @@ def test_rectangle():
     """
     a = 10
     b = 20
-    # TODO сосчитайте периметр
     perimeter = 2 * (a + b)
 
     assert perimeter == 60
 
-    # TODO сосчитайте площадь
     area = a * b
 
     assert area == 200
@@ -37,13 +35,13 @@ def test_circle():
     Используйте константу PI
     """
     r = 23
-    # TODO сосчитайте площадь
-    area = 0
 
+    area = pi * r ** 2
+    print(area)
     assert area == 1661.9025137490005
 
-    # TODO сосчитайте длину окружности
-    length = 0
+    length = 2 * pi * r
+    print(length)
 
     assert length == 144.51326206513048
 
