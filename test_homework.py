@@ -1,5 +1,7 @@
 import random
 from math import pi
+
+
 # from random import randint
 
 
@@ -78,10 +80,10 @@ def test_dicts():
     """
     first = ["a", "b", "c", "d", "e"]
     second = [1, 2, 3, 4, 5]
-    # TODO создайте словарь
-    d = {}
 
-    assert isinstance(d, dict)
-    assert len(d) == 5
-    assert list(d.keys()) == first
-    assert list(d.values()) == second
+    result_dict = dict(zip(first, second))
+
+    assert isinstance(result_dict, dict)
+    assert len(result_dict) == 5
+    assert list(result_dict.keys()) == first
+    assert list(result_dict.values()) == second
