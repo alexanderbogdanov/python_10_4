@@ -55,7 +55,7 @@ def test_random_list():
     Создайте список из 10 случайных чисел от 1 до 100 (включая обе границы) и отсортируйте его по возрастанию.
     """
 
-    sorted_random_list = sorted(random.sample(range(1, 100), 10))
+    sorted_random_list = sorted(random.sample(range(1, 101), 10))
     print(sorted_random_list)
     assert len(sorted_random_list) == 10
     assert all(sorted_random_list[i] <= sorted_random_list[i + 1] for i in range(len(sorted_random_list) - 1))
